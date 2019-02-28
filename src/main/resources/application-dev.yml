@@ -1,0 +1,17 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        enable_lazy_load_no_trans: false
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+  datasource:
+    name: master
+    url: jdbc:mysql://192.168.1.110:3306/ssm01?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    username: root
+    password: atticus2mysql
+
+    # 配置使用数据源
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
